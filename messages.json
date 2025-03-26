@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Scott Pickett",
+    "email": "scott.pickett@eastlink.ca",
+    "message": "Hello From scott",
+    "subject": "Test",
+    "consent": true
+  },
+  {
+    "name": "Ragen",
+    "email": "ragen@gmail.com",
+    "message": "Hello From Ragen",
+    "subject": "hello",
+    "consent": true
+  }
+]

@@ -4,7 +4,6 @@ function Projects() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        // Fetch projects from the backend
         fetch("/.netlify/functions/api/projects")
             .then((response) => response.json())
             .then((data) => setProjects(data))

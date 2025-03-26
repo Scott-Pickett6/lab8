@@ -1,14 +1,11 @@
-# Lab 7
+# Lab 8
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
-* *Date Created*: 19 MAR 2025
-* *Last Modification Date*: 20 MAR 2025
-* *Netlify Link: https://regal-seahorse-de4212.netlify.app/
-* *Lab URL*: https://git.cs.dal.ca/pickett/csci3172/-/tree/main/labs/lab7
-
-* *backend URL: https://main--lab7backend.netlify.app/.netlify/functions/api/projects
-
+* *Date Created*: 26 MAR 2025
+* *Last Modification Date*: 26 MAR 2025
+* *Netlify Link: https://main--papaya-mooncake-a088f1.netlify.app/
+* *Lab URL*: https://git.cs.dal.ca/pickett/csci3172/-/tree/main/labs/lab8
 
 ## Authors
 

@@ -12,9 +12,55 @@ console.log(__dirname);
 const app = express();
 const router = express.Router();
 
+app.use(express.json());
+
 app.use(cors());
 
-// Route to get all projects
+router.post("/submitMessage", (req, res) => {
+  const { name, email, message, subject, consent } = req.body;
+
+  const messageData = {
+      name: name,
+      email: email,
+      message: message,
+      subject: subject,
+      consent: consent
+  };
+
+  const messagesFilePath = "messages.json";
+  console.log("message file path: " + messagesFilePath);
+
+  fs.readFile(messagesFilePath, "utf-8", (err, data) => {
+      let messages = [];
+
+      if (!err && data) {
+          messages = JSON.parse(data);
+      }
+
+      messages.push(messageData);
+
+      fs.writeFile(messagesFilePath, JSON.stringify(messages, null, 2), (err) => {
+          if (err) {
+              return res.status(500).json({ error: "Failed to save the message." });
+          }
+
+          res.status(200).json({ message: "Message successfully saved!" });
+      });
+  });
+});
+
+router.get("/messages", async (req, res) => {
+  const messagesFilePath = "messages.json";
+
+  try {
+      const data = fs.readFileSync(messagesFilePath, "utf-8");
+      const messages = JSON.parse(data);
+      res.json(messages);
+  } catch (err) {
+      res.status(500).json({ error: "Failed to read messages." });
+  }
+});
+
 router.get("/projects", (req, res) => {
 
     data = [
