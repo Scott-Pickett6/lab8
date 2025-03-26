@@ -27,7 +27,8 @@ router.post("/submitMessage", (req, res) => {
       consent: consent
   };
 
-  const messagesFilePath = "messages.json"
+  const messagesFilePath = path.join(process.cwd(), 'public', 'messages.json');
+
 
   fs.readFile(messagesFilePath, "utf-8", (err, data) => {
       let messages = [];
@@ -49,7 +50,8 @@ router.post("/submitMessage", (req, res) => {
 });
 
 router.get("/messages", async (req, res) => {
-  const messagesFilePath = "messages.json"
+  const messagesFilePath = path.join(process.cwd(), 'public', 'messages.json');
+
 
   try {
       const data = fs.readFileSync(messagesFilePath, "utf-8");
