@@ -6,10 +6,9 @@
 [build]
   command = "npm run build"
   publish = "build"
-  functions = "functions"
+  functions = "functions-build"
   node_bundler = "esbuild"
 
 [functions]
-  directory = "functions"
+  directory = "functions-build"
   node_bundler = "esbuild"
-
