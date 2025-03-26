@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "src/functions"
+  node_bundler = "esbuild"
+
+[functions]
+  directory = "src/functions"
+  node_bundler = "esbuild"
+

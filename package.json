@@ -1,25 +1,38 @@
 {
-  "name": "lab6",
-  "version": "0.1.0",
+  "name": "lab8",
+  "version": "1.0.0",
   "private": true,
+  "description": "Full-stack React + Netlify Functions app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && netlify-lambda build src/functions",
+    "test": "react-scripts test --watchAll --coverage",
+    "deploy": "netlify deploy --prod",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "avj": "^0.0.0",
+    "ajv": "^7.2.4",
+    "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-fetch": "^2.6.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
     "react-scripts": "5.0.1",
+    "serverless-http": "^3.2.0",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --watchAll --coverage",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "netlify-lambda": "^2.0.16"
   },
   "eslintConfig": {
     "extends": [
@@ -38,9 +51,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "ajv": "^7.2.4",
-    "jest": "^29.7.0"
   }
 }

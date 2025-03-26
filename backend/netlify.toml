@@ -1,7 +1,0 @@
-[build]
-    functions = "functions"
-    node_bundler = "esbuild"
-
-[functions]
-    directory = "src"
-    node_bundler = "esbuild"

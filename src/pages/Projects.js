@@ -5,7 +5,7 @@ function Projects() {
 
     useEffect(() => {
         // Fetch projects from the backend
-        fetch("https://main--lab7backend.netlify.app/.netlify/functions/api/projects")
+        fetch("/.netlify/functions/api/projects")
             .then((response) => response.json())
             .then((data) => setProjects(data))
             .catch((error) => console.error("Error fetching projects:", error));
