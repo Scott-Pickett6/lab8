@@ -17,9 +17,6 @@ function Header({ theme, toggleTheme }) {
                         <Link className="nav-link" to="projects">Projects</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="messages">Messages</Link>
-                    </li>
-                    <li className="nav-item">
                         <button 
                             type="button" 
                             className={`btn btn-${theme === "dark" ? "light" : "dark"}`} 
